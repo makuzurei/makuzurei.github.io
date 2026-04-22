@@ -1,0 +1,509 @@
+/****リセットcss****/
+html{-webkit-text-size-adjust:100%;box-sizing:border-box;-moz-tab-size:4;tab-size:4;word-break:normal}*,:after,:before{background-repeat:no-repeat;box-sizing:inherit}:after,:before{text-decoration:inherit;vertical-align:inherit}*{margin:0;padding:0}hr{color:inherit;height:0;overflow:visible}details,main{display:block}summary{display:list-item}small{font-size:80%}[hidden]{display:none}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}a{background-color:transparent}a:active,a:hover{outline-width:0}code,kbd,pre,samp{font-family:monospace,monospace}pre{font-size:1em}b,strong{font-weight:bolder}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-color:inherit;text-indent:0}iframe{border-style:none}input{border-radius:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}textarea{overflow:auto;resize:vertical}button,input,optgroup,select,textarea{font:inherit}optgroup{font-weight:700}button{overflow:visible}button,select{text-transform:none}[role=button],[type=button],[type=reset],[type=submit],button{cursor:pointer}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button:-moz-focusring{outline:1px dotted ButtonText}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}button,input,select,textarea{background-color:transparent;border-style:none}a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-width:0}select{-moz-appearance:none;-webkit-appearance:none}select::-ms-expand{display:none}select::-ms-value{color:currentColor}legend{border:0;color:inherit;display:table;max-width:100%;white-space:normal}::-webkit-file-upload-button{-webkit-appearance:button;color:inherit;font:inherit}[disabled]{cursor:default}img{border-style:none}progress{vertical-align:baseline}[aria-busy=true]{cursor:progress}[aria-controls]{cursor:pointer}[aria-disabled=true]{cursor:default}
+/******************/
+
+@charset "UTF-8";
+
+html {
+	font-size: 100%;
+}
+
+body {
+	/*フォントを入力*/
+	font-family: sans-serif;
+	/*フォントウェイトを入力*/
+	font-weight: 500;
+  	font-style: normal;
+  	/*文字色を入力*/
+  }
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	display: block;
+	/*ボタン要素などには必要に応じてline-height: 0;を充てる*/
+}
+
+li {
+	list-style: none;
+}
+
+.fullwide {
+	width: 100%;
+}
+
+.wrapper {
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+.sp-only {
+	display: none;
+}
+
+.top-contents {
+	display: flex;
+	align-items: center;
+}
+
+#top .content {
+	display: flex;
+	justify-content: center;
+}
+
+#top .content.title {
+	width: 40%;
+}
+
+.title-wrap {
+    position: relative;
+    z-index: 100;
+    bottom: 35px;
+}
+
+.title-wrap h1 {
+	color: #121995;
+	font-weight: 600;
+	font-size: 38px;
+}
+
+.title-wrap p {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+#top .background {
+    position: absolute;
+    width: 26%;
+}
+
+#top .background img {
+	background-color: #d9d9d9;
+	height: 60px;
+}
+
+#top .content.object {
+	width: 60%;
+}
+
+#top .content.object video {
+	width: 70%;
+}
+
+.top-back {
+	padding: 80px 60px;
+}
+
+#introduction {
+	text-align: center;
+}
+
+#introduction .content {
+    position: relative;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 425px;
+    margin: 200px 0;
+}
+
+.intro-title {
+	height: 0;
+}
+
+.intro-title h2 span {
+	display: block;
+	font-size: 18px;
+    font-weight: 500;
+}
+
+.intro-wrap {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    text-align: initial;
+    padding: 2em;
+}
+
+.intro-wrap.profile {
+	color: #fff;
+}
+
+.intro-wrap.skill {
+	color: #000;
+    width: 50%;
+    left: 20%;
+}
+
+.intro-wrap.strong-point {
+	color: #3c3c3c;
+}
+
+.intro-wrap p {
+	margin: 1em 0;
+}
+
+.intro-wrap.skill p {
+	line-height: 2;
+}
+
+#introduction .background {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+#introduction .background.profile {
+	background-color: #121995;
+}
+
+#introduction .background.skill {
+	background-color: #d9d9d9;
+}
+
+#introduction .background.strong-point {
+	background-color: #05DAF0;
+}
+
+#introduction .background.skill img {
+    padding: 1em;
+    width: 90%;
+    height: 100%;
+}
+
+#introduction .fade-in {
+	opacity: 0;
+	transform: translate(-50%, 100px);
+	transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+#introduction .fade-in.is-show {
+	opacity: 1;
+	transform: translate(-50%, 0);
+}
+
+.aurora-back {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.aurora-bg-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%; /* コンテンツがどれだけ伸びても一緒に伸びる */
+	z-index: 0;
+}
+
+.aurora-bg {
+	position: sticky; /* ★ポイント：画面に張り付く */
+	top: 0;
+	width: 100%;
+	height: 100vh; /* ★ポイント：高さを画面サイズに固定するので丸が散らばらない */
+	overflow: hidden;
+	filter: blur(80px);
+	opacity: 0.8;
+	pointer-events: none;
+}
+
+/* 色の塊（Blob）の共通スタイル */
+.blob {
+	position: absolute;
+	border-radius: 50%;
+	/* alternate をつけることで、行ったり来たりする滑らかな動きに */
+	animation: wave 5s infinite alternate ease-in-out;
+}
+
+/* 塊1：パープル */
+.blob-1 {
+	width: 60vw; 
+	height: 60vw;
+	background-color: #B7AEE9;
+	top: -10%; 
+	left: -10%;
+	animation-duration: 6s;
+}
+
+/* 塊2：水色 */
+.blob-2 {
+	width: 70vw; 
+	height: 70vw;
+	background-color: #05DAF0;
+	bottom: -20%; 
+	right: -10%;
+	animation-duration: 7.5s;
+	animation-direction: alternate-reverse; /* 逆再生させることで複雑な動きに */
+}
+
+/* 塊3：ミッドナイトブルー */
+.blob-3 {
+	width: 50vw; 
+	height: 50vw;
+	background-color: #121995;
+	top: 30%; 
+	left: 30%;
+	animation-duration: 9s;
+}
+
+/* --- アニメーションの定義 --- */
+/* 位置をずらし、大きさを変え、回転させることで波打つように見せる */
+@keyframes wave {
+	0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+	50% { transform: translate(10vw, 15vh) scale(1.2) rotate(180deg); }
+	100% { transform: translate(-10vw, 10vh) scale(0.9) rotate(360deg); }
+}
+
+/* --- コンテンツ（文字など）のスタイル --- */
+.work-wrap {
+	position: relative;
+	z-index: 2; /* ★ z-index を指定してオーロラの上に文字を表示する */
+	text-align: center;
+	padding: 100px 0;
+}
+
+.work-wrap h2 span {
+	display: block;
+	font-size: 18px;
+    font-weight: 500;
+}
+
+.work-wrap p.click {
+	font-size: 13px;
+    margin-top: 1em;
+}
+
+.work-content {
+	padding: 100px;
+}
+
+.work-content .content {
+	display: flex;
+	justify-content: space-between;
+}
+
+.work-content .content.one {
+	justify-content: center;
+}
+
+.work-content .content .parts {
+	width: 30%;
+}
+
+h3 {
+	font-size: 16px;
+}
+
+.work-content>p.comment {
+    font-weight: initial;
+    margin-top: -1em;
+    margin-bottom: 2em;
+}
+
+.work-content>a {
+    margin: 2em 0 4em;
+    text-decoration: underline;
+}
+
+/* 1. 全体を固定して縦スクロール可能にする */
+#lightbox {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    overflow-y: auto !important;
+    padding: 30px 0 !important;
+}
+
+/* 2. JavaScriptが勝手に書き込む「小さなコンテナサイズ」を強制解除 */
+.lightbox .lb-outerContainer {
+    width: 30% !important;      /* 横幅を画面いっぱいに広げる */
+    max-width: 100% !important; 
+    height: auto !important;     /* 高さはJSの指定を無視して自動調整 */
+    background: transparent !important; /* 背景の白い枠を消す */
+}
+
+/* 3. 画像自体もコンテナに合わせて最大化 */
+.lightbox .lb-image {
+    width: 100% !important;      /* 横幅に合わせて拡大・縮小 */
+    height: auto !important;     /* 縦の比率を維持 */
+    max-height: none !important; /* 画面の高さに合わせる縮小を禁止 */
+}
+
+/* 4. 閉じるボタンやキャプションの幅も合わせる */
+.lightbox .lb-dataContainer {
+    width: 30% !important;
+    max-width: 100% !important;
+}
+
+.days {
+	display: inline-block;
+    background-color: #fff;
+    padding: 1em 2em;
+    border: 2px solid #000;
+    margin-top: 4em;
+    font-weight: 600;
+}
+
+.etc p {
+	color: #121995;
+    font-size: 38px;
+    font-weight: 600;
+    text-shadow: 3px 3px 0 #fff, -3px 3px 0 #fff, -3px -3px 0 #fff, 3px -3px 0 #fff;
+}
+
+.white-bg {
+	background-color: #fff;
+	margin: 100px 0;
+}
+
+.white-bg h3 {
+	margin-bottom: 5em;
+}
+
+.work-content .content .parts.url {
+    width: 60%;
+}
+
+.work-content .content .parts.url a {
+	text-decoration: underline;
+}
+
+footer {
+	background-color: #000;
+	text-align: center;
+	padding: 1em;
+}
+
+footer p {
+	color: #fff;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+	.title-wrap p {
+		font-size: 15px;
+	}
+
+	#top .background {
+		width: 40%;
+	}
+
+	.work-content .content {
+	    justify-content: space-evenly;
+	}
+
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+	.sp-only {
+		display: block;
+	}
+
+	.top-contents {
+		flex-direction: column-reverse;
+	}
+
+	#top .content.title {
+		width: 100%;
+	}
+
+	#top .background {
+		width: 95%;
+		left: 0;
+	}
+
+	#top .content.object {
+		width: 100%;
+	}
+
+	#top .content.object video {
+		width: 100%;
+		margin-bottom: 3em;
+	}
+
+	.top-back {
+		padding: 60px 0;
+	}
+	
+	#introduction .content {
+		width: 100%;
+		height: 550px;
+		margin: 0;
+	}
+
+	.intro-wrap {
+		padding: 3em;
+	}
+
+	.intro-wrap.skill {
+		width: 100%;
+		left: 0;
+	}
+
+	#introduction .background {
+		width: 95%;
+		height: 400px;
+	}
+
+	.blob-1 {
+		width: 90vw;
+		height: 100%;
+		top: 0;
+		animation-duration: 12s;
+	}
+
+	.blob-2 {
+		width: 90vw;
+        height: 100%;
+        bottom: 0;
+        animation-duration: 14.5s;
+	}
+
+	.blob-3 {
+		width: 90vw;
+		height: 100%;
+	    animation-duration: 18s;
+	}
+
+    .work-content .content {
+        flex-wrap: wrap;
+    }
+
+    .work-content .content .parts {
+	    width: 60%;
+	}
+
+	.work-content .content .parts:nth-child(1) {
+		margin-bottom: 3em;
+	}
+
+	.lightbox .lb-outerContainer {
+	    width: 70% !important;
+	}
+
+	.lightbox .lb-dataContainer {
+	    width: 70% !important;
+	}
+
+	.work-content {
+	    padding: 100px 0;
+	}
+
+
+}
